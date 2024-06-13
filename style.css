@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--Cream);
+    /* display: flex;
+    justify-content:center ;
+    align-items: center; */
+    margin: auto;
+    width: 50%;
+    padding-top: 10%;
+}
+
+.card {
+    display: flex;
+    background-color: var(--White);
+    width: 650px;
+    height: 450px;
+    border-radius: 10px;
+}
+
+.card-image img {
+    max-width: 400px;
+    height: 450px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card-description {
+    padding-left: 30px;
+    padding-top: 10px;
+}
+
+.card-description p {
+    padding-top: 25px;
+    padding-bottom: 20px;
+    letter-spacing: 0.06rem;
+    line-height: 25px;
+}
+
+h1 {
+    font-family: "fraunces", sans-serif;
+    font-weight: 500, 700;
+    padding-top: 20px;
+}
+
+.card-description h3 {
+    padding-top: 25px;
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+
+h3, p  {
+    font-family: "montserrat", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--Dark-grayish-blue);
+}
+
+.prices {
+    display: flex;
+    gap: 1rem;
+    padding-bottom: 15px;
+    align-items: center;
+}
+
+.sold-price {
+    color: var(--Dark-cyan);
+    font-size: 35px;
+    font-family: "fraunces", sans-serif;
+}
+
+.real-price {
+  text-decoration: line-through;
+  color: var(--Dark-grayish-blue);
+}
+
+.card-description a {
+    text-decoration: none;
+}
+
+button {
+    background-color: var(--Dark-cyan);
+    height: 2.9rem;
+    width: 95%;
+    border: 2px solid ;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* margin: auto; */
+    padding-right: 10px;
+    color: var(--White);
+    font-family: "montserrat", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.card-description a > button:hover {
+    background-color: var(--Cream);
+    color: black;
+}
+
+.card-description a > button:active {
+    background-color: var(--Cream);
+    color: var(--Dark-cyan);
+}
+
+@media screen and (max-width: 880px) {
+    .card {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        width: 350px;
+    }
+
+    .card-image img {
+        width: 350px;
+        height: 350px;
+        border-top-left-radius: 0px;
+        border-bottom-left-radius: 0px;
+    }
+
+    .card-description {
+        padding-left: 20px;
+        padding-top: 2px;
+    }
+
+    .card-description p {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        letter-spacing: 0.06rem;
+        line-height: 25px;
+    }
+}
